@@ -1,6 +1,7 @@
 Object class:
 Character
 Runner
+Maybe a separate object class for limited use and dice?
 Probably "borrow" my old string classes project for some of this
 
 Variables:
