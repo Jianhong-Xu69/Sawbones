@@ -1,0 +1,39 @@
+Object class:
+Character
+Runner
+Probably "borrow" my old string classes project for some of this
+
+Variables:
+Level
+Attributes
+Inventory
+Skill Proficiencies
+Armor Proficiency
+Armor Scaling
+Hitpoints
+Stamina
+Race
+Racial Features
+Feats
+Class
+Specializations
+Class Features
+All of these need to be changeable
+
+Methods:
+No parameter constructor, or just one with a name? Name and class with level?
+Change / override any and all variables
+Roll dice
+Roll checks
+Limited use Slots
+Actions
+Turn order
+Combat (Use turn order), end at any time, can kill off enemies from turn order
+Able to be cleared
+
+Runner class:
+Asks for stats, inventory, etc etc
+Loop it to ask for what you want to do? (start combat, add items)
+
+This is a lot to do
+Yikes
