@@ -4,7 +4,7 @@ public class SawbonesDice {
     {
     }
 
-    public String RollDice(int times, int number, int dice)
+    public String RollDice(int times, int number, int dice, int modifier)
     {
         int roll = 0;
         int each = 0;
@@ -16,6 +16,7 @@ public class SawbonesDice {
             for (int d = 0; d < number; d++)
             {
                 roll = (int) ((Math.random() * dice) + 1);
+                roll += modifier;
                 each += roll;
                 totalRoll += roll + ", ";
             }
