@@ -22,7 +22,7 @@ public class SawbonesRunner {
             System.out.print("What level is your character? ");
             int level = user.nextInt();
             SawbonesCharacter adventurer = new SawbonesCharacter(name, classes, race, level);
-            System.out.println(test.RollDice(2, 6, 8, -4));
+            System.out.println(test.RollStats());
             System.out.print("Input your Strength stat: ");
             System.out.println(adventurer.ChangeStats(1, user.nextInt()));
             System.out.print("Input your Agility stat: ");
