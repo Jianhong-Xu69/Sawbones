@@ -33,6 +33,10 @@ public class SawbonesCharacter {
         {
             RogueSetup();
         }
+        else if (classes.equalsIgnoreCase("knight"))
+        {
+            KnightSetup();
+        }
     }
 
     public String ChangeStats(int stat, int number)
@@ -72,28 +76,38 @@ public class SawbonesCharacter {
             return "That isn't a valid stat!";
         }
     }
-    public void RogueSetup()//DONE (?)
+    private void RogueSetup()//DONE (?)
     {
         classes = "Rogue";
-        features = "Gang Up\nBanditry";
-        proficiencies = "Light Armour\nTwo from Axes, Bludgeons, Daggers, Crossbows, Bows, and Firearms.\n";
-        inventory = "Choose between:\n(A) A Hand Axe and Tomahawk\n(B) Two Shivs\n(C) A Club, A Flintlock Pistol, and 30 Handgun Ammunition\n(D) A Hand Crossbow, 30 Hand Crossbow Bolts and a Knife\n(E) A Dirk, A Shortbow, and 30 arrows\nOne set of hide armor, a bag of tricks, three day's worth of provisions, twenty lock picks, a hood, and a mask or cloth scarf. ";
-        skills = "Choose four from: Subterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception\nIncrease them by 3";
+        features = "Gang Up\nBanditry\n";
+        proficiencies = "Light Armour\nTwo from Axes, Bludgeons, Daggers, Crossbows, Bows, and Firearms\n";
+        inventory = "Choose between:\n(A) A Hand Axe and Tomahawk\n(B) Two Shivs\n(C) A Club, A Flintlock Pistol, and 30 Handgun Ammunition\n(D) A Hand Crossbow, 30 Hand Crossbow Bolts and a Knife\n(E) A Dirk, A Shortbow, and 30 arrows\nOne set of hide armor\nA bag of tricks\nThree day's worth of provisions\nTwenty lock picks\nA hood\nA mask or cloth scarf";
+        skills = "Choose four from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception\nIncrease them by 3";
     }
-    public void RollHealthStamina()//NOT DONE NEED OTHER 3 CLASSES
+    private void KnightSetup()//DONE (?)
+    {
+        classes = "Knight";
+        features = "Defender\nValor\n";
+        proficiencies = "Light Armour\nYour choice of Medium or Heavy Armor\nTwo from Swords, Bludgeons, Daggers, or Spears\n";
+        inventory = "Three weapons of your choice that you are proficient in\nYour choice of:\nQuilted Armor\nRing Mail\nLamellar\nA seal symbolizing the Oath you swore\nOne day's worth of provisions\nYour choice of:\nHeater\nKite Shield (if proficient)\nA cape\nThree vials of water";
+        skills = "Choose two from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill\nIncrease them by 3";
+    }
+    public void RollHealthStamina()//NOT DONE NEED OTHER 2 CLASSES
     {
         if (classes.equalsIgnoreCase("rogue"))
         {
+            hitPoints = 6 + (endurance/2);
             for (int i = 1; i < level; i++)
             {
-                hitPoints += Integer.parseInt(roller.RollDice(1,1,6, (endurance/2)));
+                hitPoints += roller.RollDice(1,6, (endurance/2));
             }
         }
         if (classes.equalsIgnoreCase("knight"))
         {
+            hitPoints = 8 + (endurance/2);
             for (int i = 1; i < level; i++)
             {
-                hitPoints += Integer.parseInt(roller.RollDice(1,1,6, (endurance/2)));
+                hitPoints += roller.RollDice(1,8, (endurance/2));
             }
         }
         if (endurance > 0)
@@ -107,14 +121,18 @@ public class SawbonesCharacter {
     }
     public String CharacterInformation()
     {
-        return "\n" + name + "\n" + classes + "\n" + specialisation + "\n" + race + "\nLevel " + level + "\n" + GetStats() + "\n" + GetFeatures();
+        return "\n" + name + "\n" + classes + "\n" + specialisation + "\n" + race + "\nLevel " + level + "\n\nHP: " + hitPoints + "\nStamina: " + stamina + "\n" + GetStats() + "\n" + GetFeatures() + "\n" + GetInventory();
     }
-    public String GetStats()
+    private String GetStats()
     {
         return "\nStr: " + strength + "\nAgi: " + agility + "\nEnd: " + endurance + "\nInt: " + intellect + "\nWis: " + wisdom + "\nCha: " + charisma;
     }
-    public String GetFeatures()
+    private String GetFeatures()
     {
-        return "\n" + classes + " features:\n" + features;
+        return "\n" + classes + " features:\n" + features + "\nSkills:\n" + skills + "\n\nProficiencies: \n" + proficiencies;
+    }
+    private String GetInventory()
+    {
+        return "\nInventory:\n\n" + inventory;
     }
 }
