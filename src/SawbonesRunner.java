@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class SawbonesRunner {
     public static void main(String[] args) {
         System.out.println("This character creator is built for Sawbones 1e, NOT D&D 5e");
@@ -7,12 +8,9 @@ public class SawbonesRunner {
         Scanner user = new Scanner(System.in);
         SawbonesDice test = new SawbonesDice();
         System.out.println("Do you want to create a blank character sheet?");
-        if (user.nextLine().toLowerCase().equals("yes"))
-        {
+        if (user.nextLine().toLowerCase().equals("yes")) {
             SawbonesCharacter blank = new SawbonesCharacter();
-        }
-        else
-        {
+        } else {
             System.out.print("What is your character's name? ");
             String name = user.nextLine();
             System.out.print("What is your character's class? ");
@@ -22,7 +20,7 @@ public class SawbonesRunner {
             System.out.print("What level is your character? ");
             int level = user.nextInt();
             SawbonesCharacter adventurer = new SawbonesCharacter(name, classes, race, level);
-            System.out.println(test.RollDice(2, 6, 8, -4));
+            System.out.println(test.RollStats());
             System.out.print("Input your Strength stat: ");
             System.out.println(adventurer.ChangeStats(1, user.nextInt()));
             System.out.print("Input your Agility stat: ");

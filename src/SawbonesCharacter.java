@@ -18,64 +18,48 @@ public class SawbonesCharacter {
     private int charisma = 0;
 
     SawbonesDice roller = new SawbonesDice();
-    public SawbonesCharacter()
-    {
+
+    public SawbonesCharacter() {
         name = "nameless";
         classes = "none";
         race = "human";
         level = 1;
     }
-    public SawbonesCharacter(String name, String classes, String race, int level)
-    {
+
+    public SawbonesCharacter(String name, String classes, String race, int level) {
         this.name = name;
         this.level = level;
-        if (classes.equalsIgnoreCase("rogue"))
-        {
+        if (classes.equalsIgnoreCase("rogue")) {
             RogueSetup();
-        }
-        else if (classes.equalsIgnoreCase("knight"))
-        {
+        } else if (classes.equalsIgnoreCase("knight")) {
             KnightSetup();
         }
     }
 
-    public String ChangeStats(int stat, int number)
-    {
-        if (stat == 1)
-        {
+    public String ChangeStats(int stat, int number) {
+        if (stat == 1) {
             strength += number;
             return "Strength is now set to " + strength;
-        }
-        else if (stat == 2)
-        {
+        } else if (stat == 2) {
             agility += number;
             return "Dexterity is now set to " + agility;
-        }
-        else if (stat == 3)
-        {
+        } else if (stat == 3) {
             endurance += number;
             return "Constitution is now set to " + endurance;
-        }
-        else if (stat == 4)
-        {
+        } else if (stat == 4) {
             intellect += number;
             return "Intelligence is now set to " + intellect;
-        }
-        else if (stat == 5)
-        {
+        } else if (stat == 5) {
             wisdom += number;
             return "Wisdom is now set to " + wisdom;
-        }
-        else if (stat == 6)
-        {
+        } else if (stat == 6) {
             charisma += number;
             return "Charisma is now set to " + charisma;
-        }
-        else
-        {
+        } else {
             return "That isn't a valid stat!";
         }
     }
+
     private void RogueSetup()//DONE (?)
     {
         classes = "Rogue";
@@ -84,6 +68,7 @@ public class SawbonesCharacter {
         inventory = "Choose between:\n(A) A Hand Axe and Tomahawk\n(B) Two Shivs\n(C) A Club, A Flintlock Pistol, and 30 Handgun Ammunition\n(D) A Hand Crossbow, 30 Hand Crossbow Bolts and a Knife\n(E) A Dirk, A Shortbow, and 30 arrows\nOne set of hide armor\nA bag of tricks\nThree day's worth of provisions\nTwenty lock picks\nA hood\nA mask or cloth scarf";
         skills = "Choose four from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception\nIncrease them by 3";
     }
+
     private void KnightSetup()//DONE (?)
     {
         classes = "Knight";
@@ -92,47 +77,41 @@ public class SawbonesCharacter {
         inventory = "Three weapons of your choice that you are proficient in\nYour choice of:\nQuilted Armor\nRing Mail\nLamellar\nA seal symbolizing the Oath you swore\nOne day's worth of provisions\nYour choice of:\nHeater\nKite Shield (if proficient)\nA cape\nThree vials of water";
         skills = "Choose two from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill\nIncrease them by 3";
     }
+
     public void RollHealthStamina()//NOT DONE NEED OTHER 2 CLASSES
     {
-        if (classes.equalsIgnoreCase("rogue"))
-        {
-            hitPoints = 6 + (endurance/2);
-            for (int i = 1; i < level; i++)
-            {
-                hitPoints += roller.RollDice(1,6, (endurance/2));
+        if (classes.equalsIgnoreCase("rogue")) {
+            hitPoints = 6 + (endurance / 2);
+            for (int i = 1; i < level; i++) {
+                hitPoints += roller.RollDice(1, 6, (endurance / 2));
             }
         }
-        if (classes.equalsIgnoreCase("knight"))
-        {
-            hitPoints = 8 + (endurance/2);
-            for (int i = 1; i < level; i++)
-            {
-                hitPoints += roller.RollDice(1,8, (endurance/2));
+        if (classes.equalsIgnoreCase("knight")) {
+            hitPoints = 8 + (endurance / 2);
+            for (int i = 1; i < level; i++) {
+                hitPoints += roller.RollDice(1, 8, (endurance / 2));
             }
         }
-        if (endurance > 0)
-        {
+        if (endurance > 0) {
             stamina = 3 + endurance;
-        }
-        else
-        {
+        } else {
             stamina = 3;
         }
     }
-    public String CharacterInformation()
-    {
+
+    public String CharacterInformation() {
         return "\n" + name + "\n" + classes + "\n" + specialisation + "\n" + race + "\nLevel " + level + "\n\nHP: " + hitPoints + "\nStamina: " + stamina + "\n" + GetStats() + "\n" + GetFeatures() + "\n" + GetInventory();
     }
-    private String GetStats()
-    {
+
+    private String GetStats() {
         return "\nStr: " + strength + "\nAgi: " + agility + "\nEnd: " + endurance + "\nInt: " + intellect + "\nWis: " + wisdom + "\nCha: " + charisma;
     }
-    private String GetFeatures()
-    {
+
+    private String GetFeatures() {
         return "\n" + classes + " features:\n" + features + "\nSkills:\n" + skills + "\n\nProficiencies: \n" + proficiencies;
     }
-    private String GetInventory()
-    {
+
+    private String GetInventory() {
         return "\nInventory:\n\n" + inventory;
     }
 }
