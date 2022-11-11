@@ -1,7 +1,7 @@
 Object class:
 Character
 Runner (SawbonesRunner)
-Maybe a separate object class for limited use and dice? (Yep)
+Maybe a separate object class for limited use and dice? (Yep) (Not limited use)
 Probably "borrow" my old string classes project for some of this
 
 Variables:
@@ -26,10 +26,10 @@ No parameter constructor, or just one with a name? Name and class with level?
 Change / override any and all variables
 Roll dice
 Roll checks
-Limited use Slots
-Actions
-Turn order
-Combat (Use turn order), end at any time, can kill off enemies from turn order
+Limited use Slots (SCRAPPED)
+Actions (SCRAPPED)
+Turn order (SCRAPPED)
+Combat (Use turn order), end at any time, can kill off enemies from turn order (SCRAPPED)
 Able to be cleared
 
 Runner class:
