@@ -35,6 +35,8 @@ public class SawbonesCharacter {
             KnightSetup();
         } else if (classes.equalsIgnoreCase("runemage")) {
             RunemageSetup();
+        } else if (classes.equalsIgnoreCase("monk")) {
+            MonkSetup();
         }
     }
 
@@ -88,8 +90,16 @@ public class SawbonesCharacter {
         inventory = "Two Light weapons of your choice that you are proficient in\nOne set of hide armor\nA box full of charms\nOne day's worth of provisions\nA hood, A mask, or cloth scarf";
         skills = "Choose two from: \nMagic\nNature\nSurvival\nWill\nInsight\nHistory\nResistance\nLight Weapons\nIncrease them by 2";
     }
+    private void MonkSetup()//DONE (?)
+    {
+        classes = "Monk";
+        features = "Qi\nStances\n";
+        proficiencies = "Light Armour\nTwo from Staves, Bludgeons, Exotic Weapons, Daggers, Bows, or Spears\n";
+        inventory = "Two weapons from the following choices:\nA Long Stick\nA Hunting Bow and 20 arrows\nA Shortspear\nA Mace\nA Jian\nA Skinning Knife\nYour choice of: \nQuilted Armor\nMonk's Robes\nA scroll containing the knowledge of the Ancestral Art you follow\none day's worth of provisions\n20m of rope\na hollow gourd full of water";
+        skills = "Choose three from: \nLight Weapons\nSpeed\nMagic\nAthletics\nResistance\nHistory\nArchery\nStealth\nWill\nIncrease them by 2";
+    }
 
-    public void RollHealthStamina()//NOT DONE NEED OTHER 1 CLASS
+    public void RollHealthStamina()//DONE
     {
         if (classes.equalsIgnoreCase("rogue")) {
             hitPoints = 6 + (endurance / 2);
@@ -105,6 +115,12 @@ public class SawbonesCharacter {
         }
         if (classes.equalsIgnoreCase("runemage")) {
             hitPoints = 4 + (endurance / 2);
+            for (int i = 1; i < level; i++) {
+                hitPoints += roller.RollDice(1, 4, (endurance / 2));
+            }
+        }
+        if (classes.equalsIgnoreCase("monk")) {
+            hitPoints = 6 + (endurance / 2);
             for (int i = 1; i < level; i++) {
                 hitPoints += roller.RollDice(1, 4, (endurance / 2));
             }
