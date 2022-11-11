@@ -4,27 +4,36 @@ public class SawbonesDice {
     {
     }
 
-    public String RollDice(int times, int number, int dice, int modifier)
+    public String RollStats()
     {
         int roll = 0;
         int each = 0;
-        int total = 0;
-        String totalRoll = "";
-        for (int i = 0; i < times; i++)
+        String total = "";
+        for (int i = 0; i < 2; i++)
         {
-            totalRoll += "Set " + (i + 1) + " out of " + times + ": ";
-            for (int d = 0; d < number; d++)
+            total += "Set " + (i + 1) + " out of " + 2 + ": ";
+            for (int d = 0; d < 6; d++)
             {
-                roll = (int) ((Math.random() * dice) + 1);
-                roll += modifier;
+                roll = (int) ((Math.random() * 8) + 1);
+                roll += -4;
                 each += roll;
-                totalRoll += roll + ", ";
+                total += roll + ", ";
             }
-            totalRoll += "for a total of " + each + "\n";
-            total += each;
+            total += "for a total of " + each + "\n";
             each = 0;
         }
-        totalRoll += "The total of all these rolls is: " + total;
-        return totalRoll;
+        return total;
+    }
+    public int RollDice(int number, int side, int modifier)
+    {
+        int roll = 0;
+        int total = 0;
+        for (int d = 0; d < number; d++)
+        {
+            roll = (int) ((Math.random() * side) + 1);
+            roll += modifier;
+            total += roll;
+        }
+        return total;
     }
 }
