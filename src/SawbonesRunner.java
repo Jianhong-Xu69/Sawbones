@@ -8,7 +8,7 @@ public class SawbonesRunner {
         Scanner user = new Scanner(System.in);
         SawbonesDice test = new SawbonesDice();
         System.out.println("Do you want to create a blank character sheet?");
-        if (user.nextLine().toLowerCase().equals("yes")) {
+        if (user.nextLine().equalsIgnoreCase("yes")) {
             SawbonesCharacter blank = new SawbonesCharacter();
         } else {
             System.out.print("What is your character's name? ");

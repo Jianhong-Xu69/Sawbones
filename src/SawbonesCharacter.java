@@ -33,6 +33,8 @@ public class SawbonesCharacter {
             RogueSetup();
         } else if (classes.equalsIgnoreCase("knight")) {
             KnightSetup();
+        } else if (classes.equalsIgnoreCase("runemage")) {
+            RunemageSetup();
         }
     }
 
@@ -78,7 +80,16 @@ public class SawbonesCharacter {
         skills = "Choose two from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill\nIncrease them by 3";
     }
 
-    public void RollHealthStamina()//NOT DONE NEED OTHER 2 CLASSES
+    private void RunemageSetup()//DONE (?)
+    {
+        classes = "Runemage";
+        features = "Runecasting\nEvocation\n";
+        proficiencies = "Light Armour\nTwo from Axes, Bludgeons, Daggers, and Staves\n";
+        inventory = "Two Light weapons of your choice that you are proficient in\nOne set of hide armor\nA box full of charms\nOne day's worth of provisions\nA hood, A mask, or cloth scarf";
+        skills = "Choose two from: \nMagic\nNature\nSurvival\nWill\nInsight\nHistory\nResistance\nLight Weapons\nIncrease them by 2";
+    }
+
+    public void RollHealthStamina()//NOT DONE NEED OTHER 1 CLASS
     {
         if (classes.equalsIgnoreCase("rogue")) {
             hitPoints = 6 + (endurance / 2);
@@ -90,6 +101,12 @@ public class SawbonesCharacter {
             hitPoints = 8 + (endurance / 2);
             for (int i = 1; i < level; i++) {
                 hitPoints += roller.RollDice(1, 8, (endurance / 2));
+            }
+        }
+        if (classes.equalsIgnoreCase("runemage")) {
+            hitPoints = 4 + (endurance / 2);
+            for (int i = 1; i < level; i++) {
+                hitPoints += roller.RollDice(1, 4, (endurance / 2));
             }
         }
         if (endurance > 0) {
