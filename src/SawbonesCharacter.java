@@ -74,13 +74,13 @@ public class SawbonesCharacter {
         skills = helper.RogueSkills(starterSkill) + "\nIncrease them by 3";
     }
 
-    private void KnightSetup(String starterGear, String starterProf, String starterSkill)//DONE (?)
+    private void KnightSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Knight";
         features = "Defender\nValor\n";
-        proficiencies = "Light Armour\nYour choice of Medium or Heavy Armor\nTwo from Swords, Bludgeons, Daggers, or Spears\n";
-        inventory = "Three weapons of your choice that you are proficient in\nYour choice of:\nQuilted Armor\nRing Mail\nLamellar\nA seal symbolizing the Oath you swore\nOne day's worth of provisions\nYour choice of:\nHeater\nKite Shield (if proficient)\nA cape\nThree vials of water";
-        skills = "Choose two from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill\nIncrease them by 3";
+        proficiencies = "Light Armour\n" + helper.KnightProficiencies(starterProf);
+        inventory = "Three weapons of your choice that you are proficient in\n" + helper.KnightGear(starterGear) + "\nA seal symbolizing the Oath you swore\nOne day's worth of provisions\nYour choice of:\nHeater\nKite Shield (if proficient)\nA cape\nThree vials of water";
+        skills = helper.KnightSkills(starterSkill) + "\nIncrease them by 3";
     }
 
     private void RunemageSetup(String starter)//DONE (?)

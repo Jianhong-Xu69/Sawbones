@@ -26,7 +26,16 @@ public class SawbonesRunner {
                 starterProf = user.nextLine();
                 System.out.println("Choose between:\n(A) A Hand Axe and Tomahawk\n(B) Two Shivs\n(C) A Club, A Flintlock Pistol, and 30 Handgun Ammunition\n(D) A Hand Crossbow, 30 Hand Crossbow Bolts and a Knife\n(E) A Dirk, A Shortbow, and 30 arrows\n");
                 starterGear = user.nextLine();
-                System.out.println("Choose four from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception\nIncrease them by 3");
+                System.out.println("Choose four from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception");
+                starterSkill = user.nextLine();
+            }
+            else if (classes.equalsIgnoreCase("knight"))
+            {
+                System.out.println("Your choice of Medium or Heavy Armor, and:\nTwo from Swords, Bludgeons, Daggers, or Spears\n");
+                starterProf = user.nextLine();
+                System.out.println("Choose between:\n(A) Quilted Armor\n(B) Ring Mail\n(C) Lamellar");
+                starterGear = user.nextLine();
+                System.out.println("Choose two from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill");
                 starterSkill = user.nextLine();
             }
             System.out.print("What is your character's race? ");
