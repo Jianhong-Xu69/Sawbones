@@ -18,6 +18,7 @@ public class SawbonesCharacter {
     private int charisma = 0;
 
     SawbonesDice roller = new SawbonesDice();
+    SawbonesCharacterSetups helper = new SawbonesCharacterSetups();
 
     public SawbonesCharacter() {
         name = "nameless";
@@ -26,17 +27,17 @@ public class SawbonesCharacter {
         level = 1;
     }
 
-    public SawbonesCharacter(String name, String classes, String race, int level) {
+    public SawbonesCharacter(String name, String classes, String race, int level, String starterGear, String starterProf, String starterSkill) {
         this.name = name;
         this.level = level;
         if (classes.equalsIgnoreCase("rogue")) {
-            RogueSetup();
+            RogueSetup(starterGear, starterProf, starterSkill);
         } else if (classes.equalsIgnoreCase("knight")) {
-            KnightSetup();
+            KnightSetup(starterGear, starterProf, starterSkill);
         } else if (classes.equalsIgnoreCase("runemage")) {
-            RunemageSetup();
+            RunemageSetup(starterGear);
         } else if (classes.equalsIgnoreCase("monk")) {
-            MonkSetup();
+            MonkSetup(starterGear);
         }
     }
 
@@ -64,16 +65,16 @@ public class SawbonesCharacter {
         }
     }
 
-    private void RogueSetup()//DONE (?)
+    private void RogueSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Rogue";
         features = "Gang Up\nBanditry\n";
-        proficiencies = "Light Armour\nTwo from Axes, Bludgeons, Daggers, Crossbows, Bows, and Firearms\n";
-        inventory = "Choose between:\n(A) A Hand Axe and Tomahawk\n(B) Two Shivs\n(C) A Club, A Flintlock Pistol, and 30 Handgun Ammunition\n(D) A Hand Crossbow, 30 Hand Crossbow Bolts and a Knife\n(E) A Dirk, A Shortbow, and 30 arrows\nOne set of hide armor\nA bag of tricks\nThree day's worth of provisions\nTwenty lock picks\nA hood\nA mask or cloth scarf";
-        skills = "Choose four from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception\nIncrease them by 3";
+        proficiencies = "Light Armour\n" + helper.RogueProficiencies(starterProf);
+        inventory = helper.RogueGear(starterGear) + "One set of hide armor\nA bag of tricks\nThree day's worth of provisions\nTwenty lock picks\nA hood\nA mask or cloth scarf";
+        skills = helper.RogueSkills(starterSkill) + "\nIncrease them by 3";
     }
 
-    private void KnightSetup()//DONE (?)
+    private void KnightSetup(String starterGear, String starterProf, String starterSkill)//DONE (?)
     {
         classes = "Knight";
         features = "Defender\nValor\n";
@@ -82,7 +83,7 @@ public class SawbonesCharacter {
         skills = "Choose two from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill\nIncrease them by 3";
     }
 
-    private void RunemageSetup()//DONE (?)
+    private void RunemageSetup(String starter)//DONE (?)
     {
         classes = "Runemage";
         features = "Runecasting\nEvocation\n";
@@ -90,7 +91,7 @@ public class SawbonesCharacter {
         inventory = "Two Light weapons of your choice that you are proficient in\nOne set of hide armor\nA box full of charms\nOne day's worth of provisions\nA hood, A mask, or cloth scarf";
         skills = "Choose two from: \nMagic\nNature\nSurvival\nWill\nInsight\nHistory\nResistance\nLight Weapons\nIncrease them by 2";
     }
-    private void MonkSetup()//DONE (?)
+    private void MonkSetup(String starter)//DONE (?)
     {
         classes = "Monk";
         features = "Qi\nStances\n";

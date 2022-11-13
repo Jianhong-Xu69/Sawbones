@@ -10,17 +10,30 @@ public class SawbonesRunner {
         System.out.println("Do you want to create a blank character sheet?");
         if (user.nextLine().equalsIgnoreCase("yes")) {
             SawbonesCharacter blank = new SawbonesCharacter();
+            System.out.println(blank.CharacterInformation());
         } else {
+            System.out.println(test.RollStats());
             System.out.print("What is your character's name? ");
             String name = user.nextLine();
             System.out.print("What is your character's class? ");
             String classes = user.nextLine();
+            String starterGear = "";
+            String starterProf = "";
+            String starterSkill = "";
+            if (classes.equalsIgnoreCase("rogue"))
+            {
+                System.out.println("Choose two starter proficiencies from: \nAxes\nBludgeons\nDaggers\nCrossbows\nBows\nFirearms\n");
+                starterProf = user.nextLine();
+                System.out.println("Choose between:\n(A) A Hand Axe and Tomahawk\n(B) Two Shivs\n(C) A Club, A Flintlock Pistol, and 30 Handgun Ammunition\n(D) A Hand Crossbow, 30 Hand Crossbow Bolts and a Knife\n(E) A Dirk, A Shortbow, and 30 arrows\n");
+                starterGear = user.nextLine();
+                System.out.println("Choose four from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception\nIncrease them by 3");
+                starterSkill = user.nextLine();
+            }
             System.out.print("What is your character's race? ");
             String race = user.nextLine();
             System.out.print("What level is your character? ");
             int level = user.nextInt();
-            SawbonesCharacter adventurer = new SawbonesCharacter(name, classes, race, level);
-            System.out.println(test.RollStats());
+            SawbonesCharacter adventurer = new SawbonesCharacter(name, classes, race, level, starterProf, starterGear, starterSkill);
             System.out.print("Input your Strength stat: ");
             System.out.println(adventurer.ChangeStats(1, user.nextInt()));
             System.out.print("Input your Agility stat: ");
