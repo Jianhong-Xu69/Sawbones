@@ -1,9 +1,12 @@
+import javax.print.CancelablePrintJob;
+
 public class SawbonesCharacter {
     private String name = "";
     private String classes = "";
     private String specialisation = "";
     private String race = "";
     private String features = "";
+    private String attributes = "";
     private String inventory = "";
     private String proficiencies = "";
     private String skills = "";
@@ -19,11 +22,12 @@ public class SawbonesCharacter {
 
     SawbonesDice roller = new SawbonesDice();
     SawbonesCharacterSetups helper = new SawbonesCharacterSetups();
+    SawbonesRaceSetups assist = new SawbonesRaceSetups();
 
     public SawbonesCharacter() {
         name = "nameless";
         classes = "none";
-        race = "human";
+        race = "none";
         level = 1;
     }
 
@@ -38,6 +42,34 @@ public class SawbonesCharacter {
             RunemageSetup(starterGear, starterProf, starterSkill);
         } else if (classes.equalsIgnoreCase("monk")) {
             MonkSetup(starterGear, starterProf, starterSkill);
+        }
+        if (race.equalsIgnoreCase("human"))
+        {
+            HumanSetup();
+        }
+        else if (race.equalsIgnoreCase("Halfling"))
+        {
+            HalflingSetup();
+        }
+        else if (race.equalsIgnoreCase("Skeleton"))
+        {
+            SkeletonSetup();
+        }
+        else if (race.equalsIgnoreCase("Ghoul"))
+        {
+            GhoulSetup();
+        }
+        else if (race.equalsIgnoreCase("Elharithlaan"))
+        {
+            ElharithlaanSetup();
+        }
+        else if (race.equalsIgnoreCase("Analaan"))
+        {
+            AnalaanSetup();
+        }
+        else if (race.equalsIgnoreCase("Entaari"))
+        {
+            EntaariSetup();
         }
     }
 
@@ -99,7 +131,58 @@ public class SawbonesCharacter {
         inventory = helper.MonkGear(starterGear) + "A scroll containing the knowledge of the Ancestral Art you follow\none day's worth of provisions\n20m of rope\na hollow gourd full of water";
         skills = helper.MonkSkills(starterSkill) + "\nIncrease them by 2";
     }
-
+    private void HumanSetup()
+    {
+        race = "Human";
+        attributes = assist.Human();
+    }
+    private void HalflingSetup()
+    {
+        race = "Halfling";
+        ChangeStats(4, 1);
+        ChangeStats(2,1);
+        ChangeStats(3,-1);
+        attributes = assist.Halfling();
+    }
+    private void SkeletonSetup()
+    {
+        race = "Skeleton";
+        ChangeStats(3,1);
+        ChangeStats(4,1);
+        attributes = assist.Skeleton();
+    }
+    private void GhoulSetup()
+    {
+        race = "Ghoul";
+        ChangeStats(4,1);
+        ChangeStats(5,1);
+        ChangeStats(6,-1);
+        attributes = assist.Ghoul();
+    }
+    private void ElharithlaanSetup()
+    {
+        race = "Elharithlaan";
+        ChangeStats(2, 1);
+        ChangeStats(3, -1);
+        ChangeStats(4, 1);
+        ChangeStats(5, 1);
+        attributes = assist.Elharithlaan();
+    }
+    private void AnalaanSetup()
+    {
+        race = "Analaan";
+        ChangeStats(2, 1);
+        ChangeStats(5, 1);
+        attributes = assist.Analaan();
+    }
+    private void EntaariSetup()
+    {
+        race = "Entaari";
+        ChangeStats(2, 1);
+        ChangeStats(3, 1);
+        ChangeStats(5, 2);
+        attributes = assist.Entaari();
+    }
     public void RollHealthStamina()//DONE
     {
         if (classes.equalsIgnoreCase("rogue")) {
@@ -142,10 +225,10 @@ public class SawbonesCharacter {
     }
 
     private String GetFeatures() {
-        return "\n" + classes + " features:\n" + features + "\nSkills:\n" + skills + "\n\nProficiencies: \n" + proficiencies;
+        return "\n" + race + " attributes:\n" + attributes + "\n" + classes + " features:\n" + features + "\nSkills:\n" + skills + "\n\nProficiencies: \n" + proficiencies;
     }
 
     private String GetInventory() {
-        return "\nInventory:\n\n" + inventory;
+        return "Inventory:\n\n" + inventory;
     }
 }

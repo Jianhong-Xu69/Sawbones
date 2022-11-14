@@ -57,6 +57,18 @@ public class SawbonesRunner {
             }
             System.out.print("What is your character's race? ");
             String race = user.nextLine();
+            int asi1 = 0;
+            int asi2 = 0;
+            if (race.equalsIgnoreCase("human"))
+            {
+                System.out.println("Choose a stat to increase by 1:\n(1)Strength\n(2)Agility\n(3)Endurance\n(4)Intellect\n(5)Wisdom\n(6)Charisma\n");
+                asi1 = user.nextInt();
+                System.out.println("Choose a stat to increase by 1:\n(1)Strength\n(2)Agility\n(3)Endurance\n(4)Intellect\n(5)Wisdom\n(6)Charisma\n");
+                asi2 = user.nextInt();
+            }
+            else if (race.equalsIgnoreCase(""))
+            {
+            }
             System.out.print("What level is your character? ");
             int level = user.nextInt();
             SawbonesCharacter adventurer = new SawbonesCharacter(name, classes, race, level, starterProf, starterGear, starterSkill);
@@ -72,6 +84,10 @@ public class SawbonesRunner {
             System.out.println(adventurer.ChangeStats(5, user.nextInt()));
             System.out.print("Input your Charisma stat: ");
             System.out.println(adventurer.ChangeStats(6, user.nextInt()));
+            if (race.equalsIgnoreCase("human")) {
+                System.out.println(adventurer.ChangeStats(asi1, 1));
+                System.out.println(adventurer.ChangeStats(asi2, 1));
+            }
             adventurer.RollHealthStamina();
             System.out.println(adventurer.CharacterInformation());
         }
