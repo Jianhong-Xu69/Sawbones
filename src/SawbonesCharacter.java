@@ -1,5 +1,3 @@
-import javax.print.CancelablePrintJob;
-
 public class SawbonesCharacter {
     private String name = "";
     private String classes = "";
