@@ -35,9 +35,9 @@ public class SawbonesCharacter {
         } else if (classes.equalsIgnoreCase("knight")) {
             KnightSetup(starterGear, starterProf, starterSkill);
         } else if (classes.equalsIgnoreCase("runemage")) {
-            RunemageSetup(starterGear);
+            RunemageSetup(starterGear, starterProf, starterSkill);
         } else if (classes.equalsIgnoreCase("monk")) {
-            MonkSetup(starterGear);
+            MonkSetup(starterGear, starterProf, starterSkill);
         }
     }
 
@@ -79,25 +79,25 @@ public class SawbonesCharacter {
         classes = "Knight";
         features = "Defender\nValor\n";
         proficiencies = "Light Armour\n" + helper.KnightProficiencies(starterProf);
-        inventory = "Three weapons of your choice that you are proficient in\n" + helper.KnightGear(starterGear) + "\nA seal symbolizing the Oath you swore\nOne day's worth of provisions\nYour choice of:\nHeater\nKite Shield (if proficient)\nA cape\nThree vials of water";
+        inventory = "Three weapons of your choice that you are proficient in\n" + helper.KnightGear(starterGear) + "\nA seal symbolizing the Oath you swore\nOne day's worth of provisions\nA cape\nThree vials of water";
         skills = helper.KnightSkills(starterSkill) + "\nIncrease them by 3";
     }
 
-    private void RunemageSetup(String starter)//DONE (?)
+    private void RunemageSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Runemage";
         features = "Runecasting\nEvocation\n";
-        proficiencies = "Light Armour\nTwo from Axes, Bludgeons, Daggers, and Staves\n";
+        proficiencies = "Light Armour\n" + helper.RunemageProficiencies(starterProf);
         inventory = "Two Light weapons of your choice that you are proficient in\nOne set of hide armor\nA box full of charms\nOne day's worth of provisions\nA hood, A mask, or cloth scarf";
-        skills = "Choose two from: \nMagic\nNature\nSurvival\nWill\nInsight\nHistory\nResistance\nLight Weapons\nIncrease them by 2";
+        skills = helper.RunemageSkills(starterSkill) + "\nIncrease them by 2";
     }
-    private void MonkSetup(String starter)//DONE (?)
+    private void MonkSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Monk";
         features = "Qi\nStances\n";
-        proficiencies = "Light Armour\nTwo from Staves, Bludgeons, Exotic Weapons, Daggers, Bows, or Spears\n";
-        inventory = "Two weapons from the following choices:\nA Long Stick\nA Hunting Bow and 20 arrows\nA Shortspear\nA Mace\nA Jian\nA Skinning Knife\nYour choice of: \nQuilted Armor\nMonk's Robes\nA scroll containing the knowledge of the Ancestral Art you follow\none day's worth of provisions\n20m of rope\na hollow gourd full of water";
-        skills = "Choose three from: \nLight Weapons\nSpeed\nMagic\nAthletics\nResistance\nHistory\nArchery\nStealth\nWill\nIncrease them by 2";
+        proficiencies = "Light Armour\n" + helper.MonkProficiencies(starterProf);
+        inventory = helper.MonkGear(starterGear) + "A scroll containing the knowledge of the Ancestral Art you follow\none day's worth of provisions\n20m of rope\na hollow gourd full of water";
+        skills = helper.MonkSkills(starterSkill) + "\nIncrease them by 2";
     }
 
     public void RollHealthStamina()//DONE

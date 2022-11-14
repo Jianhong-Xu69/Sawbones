@@ -26,16 +26,33 @@ public class SawbonesRunner {
                 starterProf = user.nextLine();
                 System.out.println("Choose between:\n(A) A Hand Axe and Tomahawk\n(B) Two Shivs\n(C) A Club, A Flintlock Pistol, and 30 Handgun Ammunition\n(D) A Hand Crossbow, 30 Hand Crossbow Bolts and a Knife\n(E) A Dirk, A Shortbow, and 30 arrows\n");
                 starterGear = user.nextLine();
-                System.out.println("Choose four from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception");
+                System.out.println("Choose four starter skills from: \nSubterfuge\nStealth\nDodge\nLight Weapons\nInvestigation\nIntimidation\nArchery\nPersuasion\nPerception");
                 starterSkill = user.nextLine();
             }
             else if (classes.equalsIgnoreCase("knight"))
             {
-                System.out.println("Your choice of Medium or Heavy Armor, and:\nTwo from Swords, Bludgeons, Daggers, or Spears\n");
+                System.out.println("Choose a starting proficiency of Medium or Heavy Armor, and:\nTwo from Swords, Bludgeons, Daggers, or Spears\n");
                 starterProf = user.nextLine();
-                System.out.println("Choose between:\n(A) Quilted Armor\n(B) Ring Mail\n(C) Lamellar");
+                System.out.println("Choose between:\n(A) Quilted Armor\n(B) Ring Mail\n(C) Lamellar\nIn addition, choose between\n(1)Heater\n(2)Kite Shield (if proficient)\n");
                 starterGear = user.nextLine();
-                System.out.println("Choose two from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill");
+                System.out.println("Choose two starting skills from: \nLight Weapons\nHeavy Weapons\nMedium Armor\nHeavy Armor\nIntimidation\nAthletics\nResistance\nHistory\nInsight\nWill");
+                starterSkill = user.nextLine();
+            }
+            else if (classes.equalsIgnoreCase("runemage"))
+            {
+                System.out.println("Choose two starter proficiencies from: \nAxes\nBludgeons\nDaggers\nStaves\n");
+                starterProf = user.nextLine();
+                starterGear = "";
+                System.out.println("Choose two starting skills from: \nMagic\nNature\nSurvival\nWill\nInsight\nHistory\nResistance\nLight Weapons\n");
+                starterSkill = user.nextLine();
+            }
+            else if (classes.equalsIgnoreCase("monk"))
+            {
+                System.out.println("Choose two starter proficiencies from: \nStaves\nBludgeons\nExotic Weapons\nDaggers\nBows\nSpears\n");
+                starterProf = user.nextLine();
+                System.out.println("Choose two between:\n(A)Long Stick\n(B)Hunting Bow and 20 arrows\n(C)Shortspear\n(D)Mace\n(E)Jian\n(F)Skinning Knife\nIn addition: Choose between: \n(1)Quilted Armor\n(2)Monk's Robes\n");
+                starterGear = user.nextLine();
+                System.out.println("Choose three starter skills from: \nLight Weapons\nSpeed\nMagic\nAthletics\nResistance\nHistory\nArchery\nStealth\nWill\n");
                 starterSkill = user.nextLine();
             }
             System.out.print("What is your character's race? ");

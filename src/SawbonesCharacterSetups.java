@@ -126,17 +126,25 @@ public class SawbonesCharacterSetups {
     public String KnightGear (String choice)
     {
         String inventory = "";
-        if (choice.equalsIgnoreCase("a"))
+        if (choice.toLowerCase().contains("a"))
         {
             inventory += "Quilted Armor\n";
         }
-        else if (choice.equalsIgnoreCase("b"))
+        else if (choice.toLowerCase().contains("b"))
         {
             inventory += "Ring Mail\n";
         }
-        else if (choice.equalsIgnoreCase("c"))
+        else if (choice.toLowerCase().contains("c"))
         {
             inventory += "Lamellar\n";
+        }
+        if (choice.toLowerCase().contains("1"))
+        {
+            inventory += "Heater\n";
+        }
+        else if (choice.toLowerCase().contains("2"))
+        {
+            inventory += "Kite Shield";
         }
         return inventory;
     }
@@ -178,6 +186,173 @@ public class SawbonesCharacterSetups {
         if (choice.toLowerCase().contains("insight"))
         {
             skills += "Insight\n";
+        }
+        if (choice.toLowerCase().contains("will"))
+        {
+            skills += "Will\n";
+        }
+        return skills;
+    }
+
+    public String RunemageProficiencies (String choice)
+    {
+        String proficiencies = "";
+        if (choice.toLowerCase().contains("axes"))
+        {
+            proficiencies += "Axes\n";
+        }
+        if (choice.toLowerCase().contains("bludgeons"))
+        {
+            proficiencies += "Bludgeons\n";
+        }
+        if (choice.toLowerCase().contains("daggers"))
+        {
+            proficiencies += "Daggers\n";
+        }
+        if (choice.toLowerCase().contains("staves"))
+        {
+            proficiencies += "Staves\n";
+        }
+        return proficiencies;
+    }
+    public String RunemageSkills(String choice)
+    {
+        String skills = "";
+        if (choice.toLowerCase().contains("magic"))
+        {
+            skills += "Magic\n";
+        }
+        if (choice.toLowerCase().contains("nature"))
+        {
+            skills += "Nature\n";
+        }
+        if (choice.toLowerCase().contains("survival"))
+        {
+            skills += "Survival\n";
+        }
+        if (choice.toLowerCase().contains("will"))
+        {
+            skills += "Will\n";
+        }
+        if (choice.toLowerCase().contains("insight"))
+        {
+            skills += "Insight\n";
+        }
+        if (choice.toLowerCase().contains("history"))
+        {
+            skills += "History\n";
+        }
+        if (choice.toLowerCase().contains("resistance"))
+        {
+            skills += "Resistance\n";
+        }
+        if (choice.toLowerCase().contains("light weapons"))
+        {
+            skills += "Light Weapons\n";
+        }
+        return skills;
+    }
+
+    public String MonkProficiencies (String choice)
+    {
+        String proficiencies = "";
+        if (choice.toLowerCase().contains("staves"))
+        {
+            proficiencies += "Staves\n";
+        }
+        if (choice.toLowerCase().contains("bludgeons"))
+        {
+            proficiencies += "Bludgeons\n";
+        }
+        if (choice.toLowerCase().contains("exotic weapons"))
+        {
+            proficiencies += "Exotic Weapons\n";
+        }
+        if (choice.toLowerCase().contains("daggers"))
+        {
+            proficiencies += "Dagger\n";
+        }
+        if (choice.toLowerCase().contains("bows"))
+        {
+            proficiencies += "Bows\n";
+        }
+        if (choice.toLowerCase().contains("spear"))
+        {
+            proficiencies += "Spear\n";
+        }
+        return proficiencies;
+    }
+    public String MonkGear (String choice)
+    {
+        String inventory = "";
+        if (choice.toLowerCase().contains("a"))
+        {
+            inventory += "Long Stick\n";
+        }
+        if (choice.toLowerCase().contains("b"))
+        {
+            inventory += "Hunting Bow\n20 Arrows\n";
+        }
+        if (choice.toLowerCase().contains("c"))
+        {
+            inventory += "Shortspear\n";
+        }
+        if (choice.toLowerCase().contains("d"))
+        {
+            inventory += "Mace\n";
+        }
+        if (choice.toLowerCase().contains("e"))
+        {
+            inventory += "Jian\n";
+        }
+        if (choice.toLowerCase().contains("f"))
+        {
+            inventory += "Skinning Knife\n";
+        }
+        if (choice.toLowerCase().contains("1"))
+        {
+            inventory += "Quilted Armor\n";
+        }
+        else if (choice.toLowerCase().contains("2"))
+        {
+            inventory += "Monk's Robes\n";
+        }
+        return inventory;
+    }
+    public String MonkSkills(String choice)
+    {
+        String skills = "";
+        if (choice.toLowerCase().contains("light weapons"))
+        {
+            skills += "Light Weapons\n";
+        }
+        if (choice.toLowerCase().contains("speed"))
+        {
+            skills += "Speed\n";
+        }
+        if (choice.toLowerCase().contains("magic"))
+        {
+            skills += "Magic\n";
+        }
+        if (choice.toLowerCase().contains("athletics"))
+        {
+            skills += "Athletics\n";
+        }
+        if (choice.toLowerCase().contains("resistance"))
+        {
+            skills += "Resistance\n";
+        }
+        if (choice.toLowerCase().contains("history"))
+        {
+            skills += "History\n";
+        }
+        if (choice.toLowerCase().contains("archery"))
+        {
+            skills += "Archery\n";
+        }
+        if (choice.toLowerCase().contains("stealth"))
+        {
+            skills += "Stealth\n";
         }
         if (choice.toLowerCase().contains("will"))
         {
