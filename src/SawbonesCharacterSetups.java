@@ -115,7 +115,7 @@ public class SawbonesCharacterSetups {
         }
         if (choice.toLowerCase().contains("daggers"))
         {
-            proficiencies += "Dagger\n";
+            proficiencies += "Daggers\n";
         }
         if (choice.toLowerCase().contains("spear"))
         {
@@ -144,7 +144,7 @@ public class SawbonesCharacterSetups {
         }
         else if (choice.toLowerCase().contains("2"))
         {
-            inventory += "Kite Shield";
+            inventory += "Kite Shield\n";
         }
         return inventory;
     }
@@ -270,7 +270,7 @@ public class SawbonesCharacterSetups {
         }
         if (choice.toLowerCase().contains("daggers"))
         {
-            proficiencies += "Dagger\n";
+            proficiencies += "Daggers\n";
         }
         if (choice.toLowerCase().contains("bows"))
         {
@@ -278,7 +278,7 @@ public class SawbonesCharacterSetups {
         }
         if (choice.toLowerCase().contains("spear"))
         {
-            proficiencies += "Spear\n";
+            proficiencies += "Spears\n";
         }
         return proficiencies;
     }

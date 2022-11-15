@@ -1,3 +1,5 @@
+import java.awt.event.KeyAdapter;
+
 public class SawbonesCharacter {
     private String name = "";
     private String classes = "";
@@ -69,6 +71,30 @@ public class SawbonesCharacter {
         {
             EntaariSetup();
         }
+        else if (race.equalsIgnoreCase("Stonepeak"))
+        {
+            StonepeakSetup();
+        }
+        else if (race.equalsIgnoreCase("Ironskin"))
+        {
+            IronskinSetup();
+        }
+        else if (race.equalsIgnoreCase("Windhammer"))
+        {
+            WindhammerSetup();
+        }
+        else if (race.equalsIgnoreCase("Nishiryu"))
+        {
+            NishiryuSetup();
+        }
+        else if (race.equalsIgnoreCase("Khanak"))
+        {
+            KhanakSetup();
+        }
+        else if (race.equalsIgnoreCase("Paka'mtu"));
+        {
+            PakamtuSetup();
+        }
     }
 
     public String ChangeStats(int stat, int number) {
@@ -108,7 +134,7 @@ public class SawbonesCharacter {
     {
         classes = "Knight";
         features = "Defender\nValor\n";
-        proficiencies = "Light Armour\n" + helper.KnightProficiencies(starterProf);
+        proficiencies = "Light Armour\n" + helper.KnightProficiencies(starterProf) + "Shields\n";
         inventory = "Three weapons of your choice that you are proficient in\n" + helper.KnightGear(starterGear) + "\nA seal symbolizing the Oath you swore\nOne day's worth of provisions\nA cape\nThree vials of water";
         skills = helper.KnightSkills(starterSkill) + "\nIncrease them by 3";
     }
@@ -180,6 +206,54 @@ public class SawbonesCharacter {
         ChangeStats(3, 1);
         ChangeStats(5, 2);
         attributes = assist.Entaari();
+    }
+    private void StonepeakSetup()
+    {
+        race = "Stonepeak";
+        ChangeStats(3, 2);
+        ChangeStats(1, 2);
+        attributes = assist.Stonepeak();
+    }
+    private void IronskinSetup()
+    {
+        race = "Ironskin";
+        ChangeStats(3,3);
+        ChangeStats(1,1);
+        ChangeStats(2,-1);
+        attributes = assist.Ironskin();
+    }
+    private void WindhammerSetup()
+    {
+        race = "Windhammer";
+        ChangeStats(3,2);
+        ChangeStats(1,1);
+        ChangeStats(5,-1);
+        attributes = assist.Windhammer();
+    }
+    private void NishiryuSetup()
+    {
+        race = "Nishiryu";
+        ChangeStats(3,1);
+        ChangeStats(5,1);
+        ChangeStats(6,1);
+        attributes = assist.Nishiryu();
+    }
+    private void KhanakSetup()
+    {
+        race = "Khanak";
+        ChangeStats(1,1);
+        ChangeStats(4,1);
+        ChangeStats(5,1);
+        attributes = assist.Khanak();
+    }
+    private void PakamtuSetup()
+    {
+        race = "Paka'mtu";
+        ChangeStats(2,1);
+        ChangeStats(5,1);
+        ChangeStats(6,1);
+        attributes = assist.Pakamtu();
+        proficiencies += "Scimitars\nGreatsabres\n";
     }
     public void RollHealthStamina()//DONE
     {

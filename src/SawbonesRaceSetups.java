@@ -27,4 +27,28 @@ public class SawbonesRaceSetups {
     {
         return "Base Movement Speed is 3 Meters\nMedium Fey Elemental\nLike Kindling for the Flames\nBarkskin\nShield of the Woods\nFae Sight\nIncrease your Resistance, Magic, & Nature skills by 2\n";
     }
+    public String Stonepeak()
+    {
+        return "Base Movement Speed is 3 Meters\nSmall Humanoid\nDeep Delver\nAxes and Hammers\nSturdy & Stout\nIncrease your Medium or Heavy Armor skill by 3\nIncrease your Heavy or Light Weapon Skill by 3\n";
+    }
+    public String Ironskin()
+    {
+        return "Base Movement Speed is 3 Meters\nSmall Humanoid\nDeep Delver\nAxes and Hammers\nSturdy & Stout\nHard As Steel\nIncrease your Medium and Heavy Armor skills by 2\n";
+    }
+    public String Windhammer()
+    {
+        return "Base Movement Speed is 4 Meters\nSmall Humanoid\nDeep Delver\nAxes and Hammers\nSturdy & Stout\nBattle Frenzy\nIncrease Survival, Light Weapons, and Insight by 1\n";
+    }
+    public String Nishiryu()
+    {
+        return "Base Movement Speed is 3 Meters\nMedium Draconic Humanoid\nWise Warrior\nIncrease Medium Armor skill by 2\nIncrease Performance skill by 1\nGain Proficiency with two Exotic Weapons of your choice\n";
+    }
+    public String Khanak()
+    {
+        return "Base Movement Speed is 4 Meters\nMedium Beast Humanoid\nThundering Hooves\nBlood of Khans\nIncrease your Heavy Weapons skill by 2\nIncrease your Medium Armor and History skills by 1\n";
+    }
+    public String Pakamtu()
+    {
+        return "Base Movement Speed is 4 Meters\nMedium Beast Humanoid\nNightvision\nUseful Claws\nNine Lives\nIncrease Persuasion and Insight by 1\nIncrease your choice of Performance or Deception skills by 2\n";
+    }
 }
