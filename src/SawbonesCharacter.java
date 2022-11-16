@@ -34,64 +34,64 @@ public class SawbonesCharacter {
     public SawbonesCharacter(String name, String classes, String race, int level, String starterGear, String starterProf, String starterSkill) {
         this.name = name;
         this.level = level;
-        if (classes.equalsIgnoreCase("rogue")) {
+        if (classes.equalsIgnoreCase("a")) {
             RogueSetup(starterGear, starterProf, starterSkill);
-        } else if (classes.equalsIgnoreCase("knight")) {
+        } else if (classes.equalsIgnoreCase("b")) {
             KnightSetup(starterGear, starterProf, starterSkill);
-        } else if (classes.equalsIgnoreCase("runemage")) {
+        } else if (classes.equalsIgnoreCase("c")) {
             RunemageSetup(starterGear, starterProf, starterSkill);
-        } else if (classes.equalsIgnoreCase("monk")) {
+        } else if (classes.equalsIgnoreCase("d")) {
             MonkSetup(starterGear, starterProf, starterSkill);
         }
-        if (race.equalsIgnoreCase("human"))
+        if (race.equalsIgnoreCase("a"))
         {
             HumanSetup();
         }
-        else if (race.equalsIgnoreCase("Halfling"))
+        else if (race.equalsIgnoreCase("b"))
         {
             HalflingSetup();
         }
-        else if (race.equalsIgnoreCase("Skeleton"))
+        else if (race.equalsIgnoreCase("c"))
         {
             SkeletonSetup();
         }
-        else if (race.equalsIgnoreCase("Ghoul"))
+        else if (race.equalsIgnoreCase("d"))
         {
             GhoulSetup();
         }
-        else if (race.equalsIgnoreCase("Elharithlaan"))
+        else if (race.equalsIgnoreCase("e"))
         {
             ElharithlaanSetup();
         }
-        else if (race.equalsIgnoreCase("Analaan"))
+        else if (race.equalsIgnoreCase("f"))
         {
             AnalaanSetup();
         }
-        else if (race.equalsIgnoreCase("Entaari"))
+        else if (race.equalsIgnoreCase("g"))
         {
             EntaariSetup();
         }
-        else if (race.equalsIgnoreCase("Stonepeak"))
+        else if (race.equalsIgnoreCase("h"))
         {
             StonepeakSetup();
         }
-        else if (race.equalsIgnoreCase("Ironskin"))
+        else if (race.equalsIgnoreCase("i"))
         {
             IronskinSetup();
         }
-        else if (race.equalsIgnoreCase("Windhammer"))
+        else if (race.equalsIgnoreCase("j"))
         {
             WindhammerSetup();
         }
-        else if (race.equalsIgnoreCase("Nishiryu"))
+        else if (race.equalsIgnoreCase("k"))
         {
             NishiryuSetup();
         }
-        else if (race.equalsIgnoreCase("Khanak"))
+        else if (race.equalsIgnoreCase("l"))
         {
             KhanakSetup();
         }
-        else if (race.equalsIgnoreCase("Paka'mtu"));
+        else if (race.equalsIgnoreCase("m"))
         {
             PakamtuSetup();
         }

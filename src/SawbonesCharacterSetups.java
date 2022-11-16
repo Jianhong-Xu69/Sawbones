@@ -2,27 +2,27 @@ public class SawbonesCharacterSetups {
     public String RogueProficiencies (String choice)
     {
         String proficiencies = "";
-        if (choice.toLowerCase().contains("axes"))
+        if (choice.toLowerCase().contains("a"))
         {
             proficiencies += "Axes\n";
         }
-        if (choice.toLowerCase().contains("bludgeons"))
+        if (choice.toLowerCase().contains("b"))
         {
             proficiencies += "Bludgeons\n";
         }
-        if (choice.toLowerCase().contains("daggers"))
+        if (choice.toLowerCase().contains("c"))
         {
             proficiencies += "Daggers\n";
         }
-        if (choice.toLowerCase().contains("crossbows"))
+        if (choice.toLowerCase().contains("d"))
         {
             proficiencies += "Crossbows\n";
         }
-        if (choice.toLowerCase().contains("bows"))
+        if (choice.toLowerCase().contains("e"))
         {
             proficiencies += "Bows\n";
         }
-        if (choice.toLowerCase().contains("firearms"))
+        if (choice.toLowerCase().contains("f"))
         {
             proficiencies += "Firearms\n";
         }
@@ -55,39 +55,39 @@ public class SawbonesCharacterSetups {
     public String RogueSkills(String choice)
     {
         String skills = "";
-        if (choice.toLowerCase().contains("subterfuge"))
+        if (choice.toLowerCase().contains("a"))
         {
             skills += "Subterfuge\n";
         }
-        if (choice.toLowerCase().contains("stealth"))
+        if (choice.toLowerCase().contains("b"))
         {
             skills += "Stealth\n";
         }
-        if (choice.toLowerCase().contains("dodge"))
+        if (choice.toLowerCase().contains("c"))
         {
             skills += "Dodge\n";
         }
-        if (choice.toLowerCase().contains("light weapons"))
+        if (choice.toLowerCase().contains("d"))
         {
             skills += "Light Weapons\n";
         }
-        if (choice.toLowerCase().contains("investigation"))
+        if (choice.toLowerCase().contains("e"))
         {
             skills += "Investigation\n";
         }
-        if (choice.toLowerCase().contains("intimidation"))
+        if (choice.toLowerCase().contains("f"))
         {
             skills += "Intimidation\n";
         }
-        if (choice.toLowerCase().contains("archery"))
+        if (choice.toLowerCase().contains("g"))
         {
             skills += "Archery\n";
         }
-        if (choice.toLowerCase().contains("persuasion"))
+        if (choice.toLowerCase().contains("h"))
         {
             skills += "Persuasion\n";
         }
-        if (choice.toLowerCase().contains("perception"))
+        if (choice.toLowerCase().contains("i"))
         {
             skills += "Perception\n";
         }
@@ -97,27 +97,27 @@ public class SawbonesCharacterSetups {
     public String KnightProficiencies (String choice)
     {
         String proficiencies = "";
-        if (choice.toLowerCase().contains("medium armor"))
+        if (choice.toLowerCase().contains("a"))
         {
             proficiencies += "Medium Armor\n";
         }
-        if (choice.toLowerCase().contains("heavy armor"))
+        if (choice.toLowerCase().contains("b"))
         {
             proficiencies += "Heavy Armor\n";
         }
-        if (choice.toLowerCase().contains("swords"))
+        if (choice.toLowerCase().contains("1"))
         {
             proficiencies += "Swords\n";
         }
-        if (choice.toLowerCase().contains("bludgeons"))
+        if (choice.toLowerCase().contains("2"))
         {
             proficiencies += "Bludgeons\n";
         }
-        if (choice.toLowerCase().contains("daggers"))
+        if (choice.toLowerCase().contains("3"))
         {
             proficiencies += "Daggers\n";
         }
-        if (choice.toLowerCase().contains("spear"))
+        if (choice.toLowerCase().contains("4"))
         {
             proficiencies += "Spears\n";
         }
@@ -151,43 +151,43 @@ public class SawbonesCharacterSetups {
     public String KnightSkills(String choice)
     {
         String skills = "";
-        if (choice.toLowerCase().contains("light weapons"))
+        if (choice.toLowerCase().contains("a"))
         {
             skills += "Light Weapons\n";
         }
-        if (choice.toLowerCase().contains("heavy weapons"))
+        if (choice.toLowerCase().contains("b"))
         {
             skills += "Heavy Weapons\n";
         }
-        if (choice.toLowerCase().contains("medium armor"))
+        if (choice.toLowerCase().contains("c"))
         {
             skills += "Medium Armor\n";
         }
-        if (choice.toLowerCase().contains("heavy armor"))
+        if (choice.toLowerCase().contains("d"))
         {
             skills += "Heavy Armor\n";
         }
-        if (choice.toLowerCase().contains("intimidation"))
+        if (choice.toLowerCase().contains("e"))
         {
             skills += "Intimidation\n";
         }
-        if (choice.toLowerCase().contains("athletic"))
+        if (choice.toLowerCase().contains("f"))
         {
             skills += "Athletic\n";
         }
-        if (choice.toLowerCase().contains("resistances"))
+        if (choice.toLowerCase().contains("g"))
         {
             skills += "Resistances\n";
         }
-        if (choice.toLowerCase().contains("history"))
+        if (choice.toLowerCase().contains("h"))
         {
             skills += "History\n";
         }
-        if (choice.toLowerCase().contains("insight"))
+        if (choice.toLowerCase().contains("i"))
         {
             skills += "Insight\n";
         }
-        if (choice.toLowerCase().contains("will"))
+        if (choice.toLowerCase().contains("j"))
         {
             skills += "Will\n";
         }
@@ -197,19 +197,19 @@ public class SawbonesCharacterSetups {
     public String RunemageProficiencies (String choice)
     {
         String proficiencies = "";
-        if (choice.toLowerCase().contains("axes"))
+        if (choice.toLowerCase().contains("a"))
         {
             proficiencies += "Axes\n";
         }
-        if (choice.toLowerCase().contains("bludgeons"))
+        if (choice.toLowerCase().contains("b"))
         {
             proficiencies += "Bludgeons\n";
         }
-        if (choice.toLowerCase().contains("daggers"))
+        if (choice.toLowerCase().contains("c"))
         {
             proficiencies += "Daggers\n";
         }
-        if (choice.toLowerCase().contains("staves"))
+        if (choice.toLowerCase().contains("d"))
         {
             proficiencies += "Staves\n";
         }
@@ -218,35 +218,35 @@ public class SawbonesCharacterSetups {
     public String RunemageSkills(String choice)
     {
         String skills = "";
-        if (choice.toLowerCase().contains("magic"))
+        if (choice.toLowerCase().contains("a"))
         {
             skills += "Magic\n";
         }
-        if (choice.toLowerCase().contains("nature"))
+        if (choice.toLowerCase().contains("b"))
         {
             skills += "Nature\n";
         }
-        if (choice.toLowerCase().contains("survival"))
+        if (choice.toLowerCase().contains("c"))
         {
             skills += "Survival\n";
         }
-        if (choice.toLowerCase().contains("will"))
+        if (choice.toLowerCase().contains("d"))
         {
             skills += "Will\n";
         }
-        if (choice.toLowerCase().contains("insight"))
+        if (choice.toLowerCase().contains("e"))
         {
             skills += "Insight\n";
         }
-        if (choice.toLowerCase().contains("history"))
+        if (choice.toLowerCase().contains("f"))
         {
             skills += "History\n";
         }
-        if (choice.toLowerCase().contains("resistance"))
+        if (choice.toLowerCase().contains("g"))
         {
             skills += "Resistance\n";
         }
-        if (choice.toLowerCase().contains("light weapons"))
+        if (choice.toLowerCase().contains("h"))
         {
             skills += "Light Weapons\n";
         }
@@ -256,27 +256,27 @@ public class SawbonesCharacterSetups {
     public String MonkProficiencies (String choice)
     {
         String proficiencies = "";
-        if (choice.toLowerCase().contains("staves"))
+        if (choice.toLowerCase().contains("a"))
         {
             proficiencies += "Staves\n";
         }
-        if (choice.toLowerCase().contains("bludgeons"))
+        if (choice.toLowerCase().contains("b"))
         {
             proficiencies += "Bludgeons\n";
         }
-        if (choice.toLowerCase().contains("exotic weapons"))
+        if (choice.toLowerCase().contains("c"))
         {
             proficiencies += "Exotic Weapons\n";
         }
-        if (choice.toLowerCase().contains("daggers"))
+        if (choice.toLowerCase().contains("d"))
         {
             proficiencies += "Daggers\n";
         }
-        if (choice.toLowerCase().contains("bows"))
+        if (choice.toLowerCase().contains("e"))
         {
             proficiencies += "Bows\n";
         }
-        if (choice.toLowerCase().contains("spear"))
+        if (choice.toLowerCase().contains("f"))
         {
             proficiencies += "Spears\n";
         }
@@ -322,39 +322,39 @@ public class SawbonesCharacterSetups {
     public String MonkSkills(String choice)
     {
         String skills = "";
-        if (choice.toLowerCase().contains("light weapons"))
+        if (choice.toLowerCase().contains("a"))
         {
             skills += "Light Weapons\n";
         }
-        if (choice.toLowerCase().contains("speed"))
+        if (choice.toLowerCase().contains("b"))
         {
             skills += "Speed\n";
         }
-        if (choice.toLowerCase().contains("magic"))
+        if (choice.toLowerCase().contains("c"))
         {
             skills += "Magic\n";
         }
-        if (choice.toLowerCase().contains("athletics"))
+        if (choice.toLowerCase().contains("d"))
         {
             skills += "Athletics\n";
         }
-        if (choice.toLowerCase().contains("resistance"))
+        if (choice.toLowerCase().contains("e"))
         {
             skills += "Resistance\n";
         }
-        if (choice.toLowerCase().contains("history"))
+        if (choice.toLowerCase().contains("f"))
         {
             skills += "History\n";
         }
-        if (choice.toLowerCase().contains("archery"))
+        if (choice.toLowerCase().contains("g"))
         {
             skills += "Archery\n";
         }
-        if (choice.toLowerCase().contains("stealth"))
+        if (choice.toLowerCase().contains("h"))
         {
             skills += "Stealth\n";
         }
-        if (choice.toLowerCase().contains("will"))
+        if (choice.toLowerCase().contains("i"))
         {
             skills += "Will\n";
         }
