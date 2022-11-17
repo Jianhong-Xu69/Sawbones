@@ -7,6 +7,7 @@ public class SawbonesRunner {
         System.out.println("This was made because creating a character takes a hilarious amount of time");
         Scanner user = new Scanner(System.in);
         SawbonesDice test = new SawbonesDice();
+        String choice = "";
         System.out.println("Do you want to create a blank character sheet?");
         if (user.nextLine().equalsIgnoreCase("yes")) {
             SawbonesCharacter blank = new SawbonesCharacter();
@@ -16,12 +17,23 @@ public class SawbonesRunner {
             System.out.println(stats);
             System.out.print("What is your character's name? ");
             String name = user.nextLine();
-            System.out.println("What is your character's class? \n(A) Rogue\n(B) Knight\n(C) Runemage\n(D) Monk\n");
-            String classes = user.nextLine();
+            String classes = "";
+            for (int i = 0; i < 1; i++) {
+                System.out.println("What is your character's class? \n(A) Rogue\n(B) Knight\n(C) Runemage\n(D) Monk\n");
+                choice = user.nextLine();
+                if (choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d"))
+                {
+                    classes = choice;
+                }
+                else
+                {
+                    System.out.println("Invalid Input! Try Reading");
+                    i--;
+                }
+            }
             String starterGear = "";
             String starterProf = "";
             String starterSkill = "";
-            String choice = "";
             if (classes.equalsIgnoreCase("a"))
             {
                 for (int i = 0; i < 2; i++) {
@@ -54,7 +66,7 @@ public class SawbonesRunner {
                     }
                 }
                 for (int i = 0; i < 4; i++) {
-                    System.out.println("Choose a starter skill from: \n(A) Subterfuge\n(B) Stealth\n(C) Dodge\n(D) Light Weapons\n(E) Investigation\n(F) Intimidation\n(G) Archery\n(H) Persuasion\n(I) Perception");
+                    System.out.println("Choose a proficiency (" + (i+1) + " out of 4) from: \n(A) Subterfuge\n(B) Stealth\n(C) Dodge\n(D) Light Weapons\n(E) Investigation\n(F) Intimidation\n(G) Archery\n(H) Persuasion\n(I) Perception");
                     choice = user.nextLine();
                     if (choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d") || choice.equalsIgnoreCase("e") || choice.equalsIgnoreCase("f") || choice.equalsIgnoreCase("g") || choice.equalsIgnoreCase("h")) {
                         if (starterSkill.toLowerCase().contains(choice.toLowerCase())) {
@@ -170,17 +182,17 @@ public class SawbonesRunner {
                 }
                 starterGear = "";
                 for (int i = 0; i < 2; i++) {
-                    System.out.println("Choose a skill (" + (i+1) + " out of 2) from: \n(A) Magic\n(B) Nature\n(C) Survival\n(D) Will\n(E) Insight\n(F) History\n(G) Resistance\n(H) Light Weapons\n");
+                    System.out.println("Choose a skill (" + (i+1) + " out of 2) from: \n(A) Magic\n(B) Nature\n(C) Survival\n(D) Will\n(E) Insight\n(F) History\n(G) Resistance\n(H) Light Weapons");
                     choice = user.nextLine();
                     if (choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d") || choice.equalsIgnoreCase("e") || choice.equalsIgnoreCase("f") || choice.equalsIgnoreCase("g") || choice.equalsIgnoreCase("h"))
                     {
-                        if (starterSkill.toLowerCase().contains(choice.toLowerCase())) {
+                        if (starterSkill.toLowerCase().contains(choice.toLowerCase()))
+                        {
                             System.out.println("You already have that skill! Try again!");
                             i--;
                         }
-                        else
-                        {
-                            starterSkill += user.nextLine();
+                        else {
+                            starterSkill += choice;
                         }
                     }
                     else
@@ -190,10 +202,9 @@ public class SawbonesRunner {
                     }
                 }
             }
-            else if (classes.equalsIgnoreCase("d"))
-            {
+            else if (classes.equalsIgnoreCase("d")) {
                 for (int i = 0; i < 2; i++) {
-                    System.out.println("Choose a proficiency (" + (i+1) + " out of 2) from: \n(A) Staves\n(B) Bludgeons\n(C) Exotic Weapons\n(D) Daggers\n(E) Bows\n(F) Spears\n");
+                    System.out.println("Choose a proficiency (" + (i + 1) + " out of 2) from: \n(A) Staves\n(B) Bludgeons\n(C) Exotic Weapons\n(D) Daggers\n(E) Bows\n(F) Spears\n");
                     choice = user.nextLine();
                     if ((choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d") || choice.equalsIgnoreCase("e") || choice.equalsIgnoreCase("f"))) {
                         if (starterProf.toLowerCase().contains(choice.toLowerCase())) {
@@ -202,39 +213,70 @@ public class SawbonesRunner {
                         } else {
                             starterProf += choice;
                         }
-                    }
-                    else
-                    {
+                    } else {
                         System.out.println("Invalid Input! Try Reading");
                         i--;
                     }
                 }
                 for (int i = 0; i < 2; i++) {
-                    System.out.println("Choose an item (" + (i+1) + " out of 2) from:\n(A) Long Stick\n(B) Hunting Bow and 20 arrows\n(C) Shortspear\n(D) Mace\n(E) Jian\n(F) Skinning Knife\n");
+                    System.out.println("Choose an item (" + (i + 1) + " out of 2) from:\n(A) Long Stick\n(B) Hunting Bow and 20 arrows\n(C) Shortspear\n(D) Mace\n(E) Jian\n(F) Skinning Knife\n");
                     choice = user.nextLine();
-                    if ((choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d") || choice.equalsIgnoreCase("e") || choice.equalsIgnoreCase("f"))) {
+                    if (choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d") || choice.equalsIgnoreCase("e") || choice.equalsIgnoreCase("f")) {
                         if (starterGear.toLowerCase().contains(choice.toLowerCase())) {
                             System.out.println("You already have that item! Try again!");
                             i--;
                         } else {
                             starterGear += choice;
                         }
-                    }
-                    else
-                    {
+                    } else {
                         System.out.println("Invalid Input! Try Reading");
                         i--;
                     }
                 }
-                System.out.println("Choose between: \n(1) Quilted Armor\n(2) Monk's Robes\n");
-                starterGear += user.nextLine();
+                for (int i = 0; i < 1; i++) {
+                    System.out.println("Choose between: \n(1) Quilted Armor\n(2) Monk's Robes\n");
+                    choice = user.nextLine();
+                    if (choice.equalsIgnoreCase("1") || choice.equalsIgnoreCase("2")) {
+                        starterGear += choice;
+                    } else {
+                        System.out.println("Invalid Input! Try Reading");
+                        i--;
+                    }
+                }
                 for (int i = 0; i < 3; i++) {
-                    System.out.println("Choose a starter skills from: \n(A) Light Weapons\n(B) Speed\n(C) Magic\n(D) Athletics\n(E) Resistance\n(F) History\n(G) Archery\n(H) Stealth\n(I) Will\n");
-                    starterSkill += user.nextLine();
+                    System.out.println("Choose a skill (" + (i + 1) + " out of 3) from: \n(A) Light Weapons\n(B) Speed\n(C) Magic\n(D) Athletics\n(E) Resistance\n(F) History\n(G) Archery\n(H) Stealth\n(I) Will\n");
+                    choice = user.nextLine();
+                    if (choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d") || choice.equalsIgnoreCase("e") || choice.equalsIgnoreCase("f") || choice.equalsIgnoreCase("g") || choice.equalsIgnoreCase("h") || choice.equalsIgnoreCase("i")) {
+                        if (starterSkill.toLowerCase().contains(choice.toLowerCase()))
+                        {
+                            System.out.println("You already have this skill! Try again!");
+                            i--;
+                        }
+                        else
+                        {
+                            starterSkill += choice;
+                        }
+                    }
+                    else {
+                        System.out.println("Invalid Input! Try Reading");
+                        i--;
+                    }
                 }
             }
-            System.out.println("What is your character's race? \n(A) Human\n(B) Halfling\n(C) Skeleton\n(D) Ghoul\n(E) Elharithlaan\n(F) Analaan\n(G) Entaari\n(H) Stonepeak\n(I) Ironskin\n(J) Windhammer\n(K) Nishiryu\n(L) Khanak\n(M) Paka'mtu\n");
-            String race = user.nextLine();
+            String race = "";
+            for (int i = 0; i < 1; i++) {
+                System.out.println("What is your character's race? \n(A) Human\n(B) Halfling\n(C) Skeleton\n(D) Ghoul\n(E) Elharithlaan\n(F) Analaan\n(G) Entaari\n(H) Stonepeak\n(I) Ironskin\n(J) Windhammer\n(K) Nishiryu\n(L) Khanak\n(M) Paka'mtu\n");
+                choice = user.nextLine();
+                if (choice.equalsIgnoreCase("a") || choice.equalsIgnoreCase("b") || choice.equalsIgnoreCase("c") || choice.equalsIgnoreCase("d") || choice.equalsIgnoreCase("e") || choice.equalsIgnoreCase("f") || choice.equalsIgnoreCase("g") || choice.equalsIgnoreCase("h") || choice.equalsIgnoreCase("i") || choice.equalsIgnoreCase("j") || choice.equalsIgnoreCase("k") || choice.equalsIgnoreCase("l") || choice.equalsIgnoreCase("m"))
+                {
+                    race = choice;
+                }
+                else
+                {
+                    System.out.println("Invalid Input! Try Reading");
+                    i--;
+                }
+            }
             int asi1 = 0;
             int asi2 = 0;
             if (race.equalsIgnoreCase("a"))
