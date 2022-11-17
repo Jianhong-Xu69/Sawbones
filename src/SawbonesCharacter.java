@@ -126,7 +126,7 @@ public class SawbonesCharacter {
         classes = "Rogue";
         features = "Gang Up\nBanditry\n";
         proficiencies = "Light Armour\n" + helper.RogueProficiencies(starterProf);
-        inventory = helper.RogueGear(starterGear) + "One set of hide armor\nA bag of tricks\nThree day's worth of provisions\nTwenty lock picks\nA hood\nA mask or cloth scarf";
+        inventory = helper.RogueGear(starterGear) + "One set of hide armor\nA bag of tricks\nThree day's worth of provisions\nTwenty lock picks\nA hood, mask or cloth scarf";
         skills = helper.RogueSkills(starterSkill) + "\nIncrease them by 3";
     }
 

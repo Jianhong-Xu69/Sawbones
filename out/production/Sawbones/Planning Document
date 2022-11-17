@@ -2,30 +2,30 @@ Object class:
 Character
 Runner (SawbonesRunner)
 Maybe a separate object class for limited use and dice? (Yep) (Not limited use)
-Probably "borrow" my old string classes project for some of this
+Probably "borrow" my old string classes project for some of this (probably not needed)
 
 Variables:
-Level
-Attributes
-Inventory
-Skill Proficiencies
-Armor Proficiency
-Armor Scaling
-Hitpoints
-Stamina
-Race
-Racial Features
+Level (Done)
+Attributes (Done)
+Inventory (Done)
+Skill Proficiencies (Done)
+Armor Proficiency (Scrapped)
+Armor Scaling (Scrapped)
+Hitpoints (Done)
+Stamina (Done)
+Race (Done)
+Racial Features (Done)
 Feats
-Class
+Class (Done)
 Specializations
-Class Features
+Class Features (Done)
 All of these need to be changeable
 
 Methods:
-No parameter constructor, or just one with a name? Name and class with level?
+No parameter constructor, or just one with a name? Name and class with level? (Done)
 Change / override any and all variables
-Roll dice
-Roll checks
+Roll dice (Done)
+Roll checks (Scrapped)
 Limited use Slots (SCRAPPED)
 Actions (SCRAPPED)
 Turn order (SCRAPPED)
@@ -34,7 +34,7 @@ Able to be cleared
 
 Runner class:
 Asks for stats, inventory, etc etc
-Loop it to ask for what you want to do? (start combat, add items)
+Loop it to ask for what you want to do? (start combat, add items) (Scrapped)
 
 This is a lot to do
 Yikes
