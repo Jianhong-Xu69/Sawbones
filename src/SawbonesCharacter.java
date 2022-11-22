@@ -3,7 +3,6 @@ import java.awt.event.KeyAdapter;
 public class SawbonesCharacter {
     private String name = "";
     private String classes = "";
-    private String specialisation = "";
     private String race = "";
     private String features = "";
     private String attributes = "";
@@ -289,7 +288,7 @@ public class SawbonesCharacter {
     }
 
     public String CharacterInformation() {
-        return "\n" + name + "\n" + classes + "\n" + specialisation + "\n" + race + "\nLevel " + level + "\n\nHP: " + hitPoints + "\nStamina: " + stamina + "\n" + GetStats() + "\n" + GetFeatures() + "\n" + GetInventory();
+        return "\n" + name + "\n" + classes + "\n\n" + race + "\nLevel " + level + "\n\nHP: " + hitPoints + "\nStamina: " + stamina + "\n" + GetStats() + "\n" + GetFeatures() + "\n" + GetInventory();
     }
 
     private String GetStats() {
@@ -302,5 +301,8 @@ public class SawbonesCharacter {
 
     private String GetInventory() {
         return "Inventory:\n\n" + inventory;
+    }
+    public String toString(){
+        return CharacterInformation();
     }
 }

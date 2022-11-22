@@ -8,11 +8,16 @@ public class SawbonesRunner {
         Scanner user = new Scanner(System.in);
         SawbonesDice test = new SawbonesDice();
         String choice = "";
-        System.out.println("Do you want to create a blank character sheet?");
-        if (user.nextLine().equalsIgnoreCase("yes")) {
+        boolean sheet;
+        System.out.println("Press 1 to create a blank character sheet");
+        if (user.nextLine().equalsIgnoreCase("1")) {
             SawbonesCharacter blank = new SawbonesCharacter();
-            System.out.println(blank.CharacterInformation());
+            System.out.println(blank);
+            sheet = false;
         } else {
+            sheet = true;
+        }
+        if (sheet) {
             String stats = test.RollStats();
             System.out.println(stats);
             System.out.print("What is your character's name? ");
@@ -307,7 +312,7 @@ public class SawbonesRunner {
                 System.out.println(adventurer.ChangeStats(asi2, 1));
             }
             adventurer.RollHealthStamina();
-            System.out.println(adventurer.CharacterInformation());
+            System.out.println(adventurer);
         }
     }
 }
