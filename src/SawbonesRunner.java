@@ -6,7 +6,7 @@ public class SawbonesRunner {
         System.out.println("This is not meant to be a replacement to a character sheet");
         System.out.println("This was made because creating a character takes a hilarious amount of time");
         Scanner user = new Scanner(System.in);
-        SawbonesDice test = new SawbonesDice();
+        SawbonesDice roller = new SawbonesDice();
         String choice = "";
         boolean sheet;
         System.out.println("Press 1 to create a blank character sheet");
@@ -18,7 +18,7 @@ public class SawbonesRunner {
             sheet = true;
         }
         if (sheet) {
-            String stats = test.RollStats();
+            String stats = roller.RollStats();
             System.out.println(stats);
             System.out.print("What is your character's name? ");
             String name = user.nextLine();
