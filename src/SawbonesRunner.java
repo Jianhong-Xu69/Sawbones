@@ -9,7 +9,7 @@ public class SawbonesRunner {
         SawbonesDice roller = new SawbonesDice();
         String choice = "";
         boolean sheet;
-        System.out.println("Press 1 to create a blank character sheet");
+        System.out.println("Press (1) to create a blank character sheet, anything else for an in depth one");
         if (user.nextLine().equalsIgnoreCase("1")) {
             SawbonesCharacter blank = new SawbonesCharacter();
             System.out.println(blank);
