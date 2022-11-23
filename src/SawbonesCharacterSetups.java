@@ -1,4 +1,18 @@
+/**
+ * The SawbonesCharacterSetups class is a helper class created to hopefully make the SawbonesCharacter class less complicated. It did not
+ */
 public class SawbonesCharacterSetups {
+    /**
+     * Constructor for the SawbonesCharacterSetup class. This is a helper class so it does nothing
+     */
+    public SawbonesCharacterSetups(){
+    }
+
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen proficiencies of a Rogue
+     * @param choice represents what proficiencies were chosen
+     * @return a String containing the proficiencies suited for a Rogue
+     */
     public String RogueProficiencies (String choice)
     {
         String proficiencies = "";
@@ -28,6 +42,12 @@ public class SawbonesCharacterSetups {
         }
         return proficiencies;
     }
+
+    /**
+     * Method for the SawboneCharacterSetups class, returns the chosen loadout of a Rogue
+     * @param choice represents what loadout items were chosen
+     * @return a String containing the loadout suited for a Rogue
+     */
     public String RogueGear (String choice)
     {
         String inventory = "";
@@ -52,6 +72,12 @@ public class SawbonesCharacterSetups {
         }
         return inventory;
     }
+
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen skills of a Rogue
+     * @param choice represents what skills were chosen
+     * @return a String containing the skills suited for a Rogue
+     */
     public String RogueSkills(String choice)
     {
         String skills = "";
@@ -94,6 +120,11 @@ public class SawbonesCharacterSetups {
         return skills;
     }
 
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen proficiencies of a Knight
+     * @param choice represents what proficiencies were chosen
+     * @return a String containing the proficiencies suited for a Knight
+     */
     public String KnightProficiencies (String choice)
     {
         String proficiencies = "";
@@ -123,6 +154,12 @@ public class SawbonesCharacterSetups {
         }
         return proficiencies;
     }
+
+    /**
+     * Method for the SawboneCharacterSetups class, returns the chosen loadout of a Knight
+     * @param choice represents what loadout items were chosen
+     * @return a String containing the loadout suited for a Knight
+     */
     public String KnightGear (String choice)
     {
         String inventory = "";
@@ -148,6 +185,12 @@ public class SawbonesCharacterSetups {
         }
         return inventory;
     }
+
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen skills of a Knight
+     * @param choice represents what skills were chosen
+     * @return a String containing the skills suited for a Knight
+     */
     public String KnightSkills(String choice)
     {
         String skills = "";
@@ -194,6 +237,11 @@ public class SawbonesCharacterSetups {
         return skills;
     }
 
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen proficiencies of a Runemage
+     * @param choice represents what proficiencies were chosen
+     * @return a String containing the proficiencies suited for a Runemage
+     */
     public String RunemageProficiencies (String choice)
     {
         String proficiencies = "";
@@ -215,6 +263,12 @@ public class SawbonesCharacterSetups {
         }
         return proficiencies;
     }
+
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen skills of a Runemage
+     * @param choice represents what skills were chosen
+     * @return a String containing the skills suited for a Runemage
+     */
     public String RunemageSkills(String choice)
     {
         String skills = "";
@@ -253,6 +307,11 @@ public class SawbonesCharacterSetups {
         return skills;
     }
 
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen proficiencies of a Monk
+     * @param choice represents what proficiencies were chosen
+     * @return a String containing the proficiencies suited for a Monk
+     */
     public String MonkProficiencies (String choice)
     {
         String proficiencies = "";
@@ -282,6 +341,12 @@ public class SawbonesCharacterSetups {
         }
         return proficiencies;
     }
+
+    /**
+     * Method for the SawboneCharacterSetups class, returns the chosen loadout of a Monk
+     * @param choice represents what loadout items were chosen
+     * @return a String containing the loadout suited for a Monk
+     */
     public String MonkGear (String choice)
     {
         String inventory = "";
@@ -319,6 +384,12 @@ public class SawbonesCharacterSetups {
         }
         return inventory;
     }
+
+    /**
+     * Method for the SawbonesCharacterSetups class, returns the chosen skills of a Monk
+     * @param choice represents what skills were chosen
+     * @return a String containing the skills suited for a Monk
+     */
     public String MonkSkills(String choice)
     {
         String skills = "";

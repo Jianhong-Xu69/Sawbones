@@ -1,5 +1,6 @@
-import java.awt.event.KeyAdapter;
-
+/**
+ * The SawbonesCharacter class represents the Sawbones Character sheet. A Sawbones Character sheet contains a name, class, race, features, attributes, inventory, skills, level, hitPoints, stamina, strength, agility, endurance, intellect, wisdom, and charisma
+ */
 public class SawbonesCharacter {
     private String name = "";
     private String classes = "";
@@ -23,6 +24,9 @@ public class SawbonesCharacter {
     SawbonesCharacterSetups helper = new SawbonesCharacterSetups();
     SawbonesRaceSetups assist = new SawbonesRaceSetups();
 
+    /**
+     * Empty Constructor for the SawbonesCharacter class, creates a default instance of SawbonesCharacter.
+     */
     public SawbonesCharacter() {
         name = "nameless";
         classes = "none";
@@ -30,6 +34,17 @@ public class SawbonesCharacter {
         level = 1;
     }
 
+    /**
+     * Constructor for the SawbonesCharacter class. This creates a new instance of SawbonesCharacter given the following parameters
+     *
+     * @param name represents the name of the SawbonesCharacter
+     * @param classes represents the classes of the SawbonesCharacter
+     * @param race represents the race of the SawbonesCharacter
+     * @param level represents the level of the SawbonesCharacter
+     * @param starterGear represents the starting gear loadout of the SawbonesCharacter
+     * @param starterProf represents the starting proficiencies of the SawbonesCharacter
+     * @param starterSkill represents the starting skill set of the SawbonesCharacter
+     */
     public SawbonesCharacter(String name, String classes, String race, int level, String starterGear, String starterProf, String starterSkill) {
         this.name = name;
         this.level = level;
@@ -96,6 +111,13 @@ public class SawbonesCharacter {
         }
     }
 
+    /**
+     * Method for the SawbonesCharacter class. Takes two ints and changes a variable according to those two ints
+     *
+     * @param stat represents the variable that is going to be changed
+     * @param number represents the amount that the variable increments
+     * @return a String detailing what variable was changed and to what amount
+     */
     public String ChangeStats(int stat, int number) {
         if (stat == 1) {
             strength += number;
@@ -120,6 +142,13 @@ public class SawbonesCharacter {
         }
     }
 
+    /**
+     * Method for the SawbonesCharacter class, initializes the starting proficiencies, items, and skills for a Rogue in the SawbonesCharacter class
+     *
+     * @param starterProf represents the starting proficiencies of a Rogue
+     * @param starterGear represents the starting loadout of a Rogue
+     * @param starterSkill represents the starting skillset of a Rogue
+     */
     private void RogueSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Rogue";
@@ -129,6 +158,13 @@ public class SawbonesCharacter {
         skills = helper.RogueSkills(starterSkill) + "\nIncrease them by 3";
     }
 
+    /**
+     * Method for the SawbonesCharacter class, initializes the starting proficiencies, items, and skills for a Knight in the SawbonesCharacter class
+     *
+     * @param starterProf represents the starting proficiencies of a Knight
+     * @param starterGear represents the starting loadout of a Knight
+     * @param starterSkill represents the starting skillset of a Knight
+     */
     private void KnightSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Knight";
@@ -138,6 +174,13 @@ public class SawbonesCharacter {
         skills = helper.KnightSkills(starterSkill) + "\nIncrease them by 3";
     }
 
+    /**
+     * Method for the SawbonesCharacter class, initializes the starting proficiencies, items, and skills for a Runemage in the SawbonesCharacter class
+     *
+     * @param starterProf represents the starting proficiencies of a Runemage
+     * @param starterGear was a holdover from a previous version that I'm too afraid to delete. Oh well
+     * @param starterSkill represents the starting skillset of a Runemage
+     */
     private void RunemageSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Runemage";
@@ -146,6 +189,14 @@ public class SawbonesCharacter {
         inventory = "Two Light weapons of your choice that you are proficient in\nOne set of hide armor\nA box full of charms\nOne day's worth of provisions\nA hood, A mask, or cloth scarf";
         skills = helper.RunemageSkills(starterSkill) + "\nIncrease them by 2";
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initializes the starting proficiencies, items, and skills for a Monk in the SawbonesCharacter class
+     *
+     * @param starterProf represents the starting proficiencies of a Monk
+     * @param starterGear represents the starting loadout of a Monk
+     * @param starterSkill represents the starting skillset of a Monk
+     */
     private void MonkSetup(String starterProf, String starterGear, String starterSkill)//DONE (?)
     {
         classes = "Monk";
@@ -154,11 +205,19 @@ public class SawbonesCharacter {
         inventory = helper.MonkGear(starterGear) + "A scroll containing the knowledge of the Ancestral Art you follow\none day's worth of provisions\n20m of rope\na hollow gourd full of water";
         skills = helper.MonkSkills(starterSkill) + "\nIncrease them by 2";
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initializes the race of the SawbonesCharacter as Human
+     */
     private void HumanSetup()
     {
         race = "Human";
         attributes = assist.Human();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initializes the race of the SawbonesCharacter as Halfling
+     */
     private void HalflingSetup()
     {
         race = "Halfling";
@@ -167,6 +226,10 @@ public class SawbonesCharacter {
         ChangeStats(3,-1);
         attributes = assist.Halfling();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Skeleton
+     */
     private void SkeletonSetup()
     {
         race = "Skeleton";
@@ -174,6 +237,10 @@ public class SawbonesCharacter {
         ChangeStats(4,1);
         attributes = assist.Skeleton();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Ghoul
+     */
     private void GhoulSetup()
     {
         race = "Ghoul";
@@ -182,6 +249,10 @@ public class SawbonesCharacter {
         ChangeStats(6,-1);
         attributes = assist.Ghoul();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Elharithlaan
+     */
     private void ElharithlaanSetup()
     {
         race = "Elharithlaan";
@@ -191,6 +262,10 @@ public class SawbonesCharacter {
         ChangeStats(5, 1);
         attributes = assist.Elharithlaan();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Analaan
+     */
     private void AnalaanSetup()
     {
         race = "Analaan";
@@ -198,6 +273,10 @@ public class SawbonesCharacter {
         ChangeStats(5, 1);
         attributes = assist.Analaan();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Entaari
+     */
     private void EntaariSetup()
     {
         race = "Entaari";
@@ -206,6 +285,10 @@ public class SawbonesCharacter {
         ChangeStats(5, 2);
         attributes = assist.Entaari();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Stonepeak
+     */
     private void StonepeakSetup()
     {
         race = "Stonepeak";
@@ -213,6 +296,10 @@ public class SawbonesCharacter {
         ChangeStats(1, 2);
         attributes = assist.Stonepeak();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Ironskin
+     */
     private void IronskinSetup()
     {
         race = "Ironskin";
@@ -221,6 +308,10 @@ public class SawbonesCharacter {
         ChangeStats(2,-1);
         attributes = assist.Ironskin();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Windhammer
+     */
     private void WindhammerSetup()
     {
         race = "Windhammer";
@@ -229,6 +320,10 @@ public class SawbonesCharacter {
         ChangeStats(5,-1);
         attributes = assist.Windhammer();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Nishiryu
+     */
     private void NishiryuSetup()
     {
         race = "Nishiryu";
@@ -237,6 +332,10 @@ public class SawbonesCharacter {
         ChangeStats(6,1);
         attributes = assist.Nishiryu();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Khanak
+     */
     private void KhanakSetup()
     {
         race = "Khanak";
@@ -245,6 +344,10 @@ public class SawbonesCharacter {
         ChangeStats(5,1);
         attributes = assist.Khanak();
     }
+
+    /**
+     * Method for the SawbonesCharacter class, initialize the race of the SawbonesCharacter as Paka'mtu
+     */
     private void PakamtuSetup()
     {
         race = "Paka'mtu";
@@ -254,6 +357,10 @@ public class SawbonesCharacter {
         attributes = assist.Pakamtu();
         proficiencies += "Scimitars\nGreatsabres\n";
     }
+
+    /**
+     * Method for the SawboneCharacter class, generates the hitpoints and stamina of an instance of the SawbonesCharacter class
+     */
     public void RollHealthStamina()//DONE
     {
         if (classes.equalsIgnoreCase("rogue")) {
@@ -287,21 +394,42 @@ public class SawbonesCharacter {
         }
     }
 
+    /**
+     * Method that returns a formatted version of the Sawbones Character Sheet
+     * @return a String of a formatted version of the Sawbones Character Sheet
+     */
     public String CharacterInformation() {
         return "\n" + name + "\n" + classes + "\n\n" + race + "\nLevel " + level + "\n\nHP: " + hitPoints + "\nStamina: " + stamina + "\n" + GetStats() + "\n" + GetFeatures() + "\n" + GetInventory();
     }
 
+    /**
+     * Method that returns a formatted part of the Sawbones Character Sheet
+     * @return a String of a  formatted version of the stats on the Sawbones Character Sheet
+     */
     private String GetStats() {
         return "\nStr: " + strength + "\nAgi: " + agility + "\nEnd: " + endurance + "\nInt: " + intellect + "\nWis: " + wisdom + "\nCha: " + charisma;
     }
 
+    /**
+     * Method that returns a formatted part of the Sawbones Character Sheet
+     * @return a String of a formatted versions of the attributes, features, skills, and proficiencies on the Sawbones Character Sheet
+     */
     private String GetFeatures() {
         return "\n" + race + " attributes:\n" + attributes + "\n" + classes + " features:\n" + features + "\nSkills:\n" + skills + "\n\nProficiencies: \n" + proficiencies;
     }
 
+    /**
+     * Method that returns a formatted part of the Sawbones Character Sheet
+     * @return a String of a formatted version of the inventory on the Sawbones Character Sheet
+     */
     private String GetInventory() {
         return "Inventory:\n\n" + inventory;
     }
+
+    /**
+     * toString that returns the formatted version of the Sawbones Character Sheet
+     * @return a String of a formatted version of the Sawbones Character Sheet
+     */
     public String toString(){
         return CharacterInformation();
     }
